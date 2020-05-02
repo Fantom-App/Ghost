@@ -1,0 +1,43 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: fantomappdev/node-grunt:latest
+    steps:
+      - checkout
+      - run:
+          name: "Pull Submodules"
+          command: |
+            git submodule init
+            git submodule update --remote
+      - run:
+          name: "Install deps"
+          command: yarn
+      - run:
+          name: "Build release"
+          command: JOBS=1 grunt release
+      - run:
+          name: "Upload file"
+          command: |
+            cd .dist/release
+            timestamp=$(date +%s)
+            latest_file=$(ls -t | head -n 1)
+            file_name=${latest_file::${#latest_file}-4}-${timestamp}.zip
+            aws s3 cp $latest_file s3://fantom-ghost-builds/${file_name}
+            echo 'export S3_FILE='$file_name >> $BASH_ENV
+      - run:
+          name: 'Deploy'
+          command: |
+            WGET_CMD="wget https://fantom-ghost-builds.s3.amazonaws.com/"${S3_FILE}
+            BUILD_CMD="cd /var/www/ghost/ && ghost update --force --zip ~/"${S3_FILE}
+            echo "ec2-54-158-15-108.compute-1.amazonaws.com,54.158.15.108 ecdsa-sha2-nistp256 ${EC2_KNOWN_HOST}" >> ~/.ssh/known_hosts
+            ssh ubuntu@ec2-54-158-15-108.compute-1.amazonaws.com $WGET_CMD
+            ssh ubuntu@ec2-54-158-15-108.compute-1.amazonaws.com $BUILD_CMD
+            exit
+workflows:
+    build-and-deploy:
+      jobs:
+        - build:
+            filters:
+              branches:
+                only: master 
