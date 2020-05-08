@@ -7,9 +7,13 @@
     "definitions": {
         "post": {
             "type": "object",
-            "additionalProperties": false,
+            "additionalProperties": true,
             "properties": {
                 "title": {
+                    "type": "string",
+                    "maxLength": 2000
+                },
+                "content_type": {
                     "type": "string",
                     "maxLength": 2000
                 },
