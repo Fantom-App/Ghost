@@ -73,6 +73,7 @@ module.exports = [
                 'twitter_title',
                 'twitter_description',
                 'custom_template',
+                'content_type',
                 'locale',
                 'tags',
                 'authors',

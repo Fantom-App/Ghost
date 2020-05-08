@@ -5,7 +5,7 @@
     "title": "posts.edit",
     "description": "Schema for posts.edit",
     "type": "object",
-    "additionalProperties": false,
+    "additionalProperties": true,
     "properties": {
         "posts": {
             "type": "array",

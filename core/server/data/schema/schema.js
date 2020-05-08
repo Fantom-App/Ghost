@@ -50,7 +50,8 @@ module.exports = {
         codeinjection_head: {type: 'text', maxlength: 65535, nullable: true},
         codeinjection_foot: {type: 'text', maxlength: 65535, nullable: true},
         custom_template: {type: 'string', maxlength: 100, nullable: true},
-        canonical_url: {type: 'text', maxlength: 2000, nullable: true}
+        canonical_url: {type: 'text', maxlength: 2000, nullable: true},
+        content_type: {type: 'text', maxlength: 2000, nullable: true}
     },
     posts_meta: {
         id: {type: 'string', maxlength: 24, nullable: false, primary: true},

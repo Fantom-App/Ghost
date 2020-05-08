@@ -5,7 +5,7 @@
     "title": "posts.add",
     "description": "Schema for posts.add",
     "type": "object",
-    "additionalProperties": false,
+    "additionalProperties": true,
     "properties": {
         "posts": {
             "type": "array",
