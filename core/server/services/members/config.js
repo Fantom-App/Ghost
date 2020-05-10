@@ -76,6 +76,7 @@ const getApiUrl = ({version, type}) => {
 };
 
 const siteUrl = urlUtils.getSiteUrl();
+const staticSiteUrl = urlUtils.getStaticSiteUrl();
 const membersApiUrl = getApiUrl({version: 'v3', type: 'members'});
 
 function getStripePaymentConfig() {
@@ -155,7 +156,7 @@ function getTokenConfig() {
 }
 
 function getSigninURL(token, type) {
-    const signinURL = new URL(siteUrl);
+    const signinURL = new URL(staticSiteUrl);
     signinURL.pathname = path.join(signinURL.pathname, '/members/');
     signinURL.searchParams.set('token', token);
     signinURL.searchParams.set('action', type);

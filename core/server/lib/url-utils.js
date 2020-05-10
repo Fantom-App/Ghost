@@ -15,4 +15,9 @@ const urlUtils = new UrlUtils({
     }
 });
 
+urlUtils.getStaticSiteUrl = function () {
+    const url = config.get('staticSite:url');
+    return url ? url : urlUtils.getSiteUrl();
+};
+
 module.exports = urlUtils;
