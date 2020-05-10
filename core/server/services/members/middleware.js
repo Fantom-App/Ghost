@@ -121,10 +121,23 @@ const createSessionFromMagicLink = async function (req, res, next) {
     }
 };
 
+const authWithMagicLink = async function (req, res) {
+    try {
+        req.url = req.url.replace('auth=', 'token=');
+        const member = await membersService.ssr.exchangeTokenForSession(req, res);
+        res.json({member});
+    } catch (err) {
+        logging.warn(err.message);
+        res.writeHead(err.statusCode);
+        res.end(err.message);
+    }
+}
+
 // Set req.member & res.locals.member if a cookie is set
 module.exports = {
     loadMemberSession,
     createSessionFromMagicLink,
+    authWithMagicLink,
     getIdentityToken,
     getMemberData,
     getMemberSiteData,

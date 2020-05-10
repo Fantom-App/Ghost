@@ -31,6 +31,9 @@ module.exports = function setupMembersApp() {
     membersApp.get('/api/session', middleware.getIdentityToken);
     membersApp.delete('/api/session', middleware.deleteSession);
     membersApp.get('/api/site', middleware.getMemberSiteData);
+    membersApp.post('/api/auth-with-magic-link', (req, res) => {
+        return middleware.authWithMagicLink(req, res);
+    });
 
     // NOTE: this is wrapped in a function to ensure we always go via the getter
     membersApp.post('/api/send-magic-link', (req, res, next) => membersService.api.middleware.sendMagicLink(req, res, next));
