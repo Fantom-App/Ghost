@@ -15,6 +15,18 @@
                     "maxLength": 191,
                     "pattern": "^([^,]|$)"
                 },
+                "type": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 191
+                },
+                "featured": {
+                    "type": "boolean"
+                },
+                "featured_description": {
+                    "type": ["string", "null"],
+                    "maxLength": 191
+                },
                 "slug": {
                     "type": ["string", "null"],
                     "maxLength": 191

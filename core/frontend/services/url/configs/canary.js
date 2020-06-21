@@ -97,7 +97,10 @@ module.exports = [
                 'description',
                 'meta_title',
                 'meta_description',
-                'parent_id'
+                'parent_id',
+                'type',
+                'featured',
+                'featured_description'
             ],
             filter: 'visibility:public',
             shouldHavePosts: {

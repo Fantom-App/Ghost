@@ -5,7 +5,7 @@
     "title": "tags.edit",
     "description": "Schema for tags.edit",
     "type": "object",
-    "additionalProperties": false,
+    "additionalProperties": true,
     "properties": {
         "tags": {
             "type": "array",
