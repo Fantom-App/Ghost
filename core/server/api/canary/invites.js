@@ -8,6 +8,7 @@ const models = require('../../models');
 const api = require('./index');
 const ALLOWED_INCLUDES = [];
 const UNSAFE_ATTRS = ['role_id'];
+const config = require('../../config');
 
 module.exports = {
     docName: 'invites',
@@ -127,7 +128,11 @@ module.exports = {
                 .then((_invite) => {
                     invite = _invite;
 
-                    const adminUrl = urlUtils.urlFor('admin', true);
+                    let adminUrl = urlUtils.urlFor('admin', true);
+                    const reverseProxyPath = config.get('reverseProxyPath');
+                    if (reverseProxyPath) {
+                        adminUrl = adminUrl.replace('/ghost', `/${reverseProxyPath}/#`)
+                    }
 
                     emailData = {
                         blogName: settingsCache.get('title'),
