@@ -199,7 +199,7 @@ Array.prototype.forEach.call(document.querySelectorAll('[data-members-signout]')
             method: 'DELETE'
         }).then(function (res) {
             if (res.ok) {
-                window.location.replace(window.location.pathname + '#/signin');
+                window.location.reload();
             } else {
                 el.addEventListener('click', clickHandler);
                 el.classList.remove('loading');
