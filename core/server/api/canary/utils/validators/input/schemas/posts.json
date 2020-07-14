@@ -177,6 +177,9 @@
                 },
                 "send_email_when_published": {
                     "strip": true
+                },
+                "sent_email": {
+                    "strip": true
                 }
             }
         },
