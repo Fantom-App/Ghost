@@ -24,6 +24,7 @@ jobs:
             latest_file=$(ls -t | head -n 1)
             file_name=${latest_file::${#latest_file}-4}-${timestamp}.zip
             aws s3 cp $latest_file s3://fantom-ghost-builds/${file_name}
+            aws s3 cp $latest_file s3://fantom-ghost-builds/cereal_latest.zip
             echo 'export S3_FILE='$file_name >> $BASH_ENV
       - run:
           name: 'Deploy'
