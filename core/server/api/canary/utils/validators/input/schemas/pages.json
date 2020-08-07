@@ -7,7 +7,7 @@
     "definitions": {
         "page": {
             "type": "object",
-            "additionalProperties": false,
+            "additionalProperties": true,
             "properties": {
                 "title": {
                     "type": "string",
