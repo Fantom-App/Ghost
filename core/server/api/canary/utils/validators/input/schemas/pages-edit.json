@@ -5,7 +5,7 @@
     "title": "pages.edit",
     "description": "Schema for pages.edit",
     "type": "object",
-    "additionalProperties": false,
+    "additionalProperties": true,
     "properties": {
         "pages": {
             "type": "array",

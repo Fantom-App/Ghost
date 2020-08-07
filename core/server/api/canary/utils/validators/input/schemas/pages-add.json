@@ -5,7 +5,7 @@
     "title": "pages.add",
     "description": "Schema for pages.add",
     "type": "object",
-    "additionalProperties": false,
+    "additionalProperties": true,
     "properties": {
         "pages": {
             "type": "array",
