@@ -24,12 +24,13 @@ jobs:
             latest_file=$(ls -t | head -n 1)
             file_name=${latest_file::${#latest_file}-4}-${timestamp}.zip
             aws s3 cp $latest_file s3://fantom-ghost-builds/${file_name}
+            aws s3 cp $latest_file s3://fantom-ghost-builds/cereal_latest.zip
             echo 'export S3_FILE='$file_name >> $BASH_ENV
       - run:
           name: 'Deploy'
           command: |
             WGET_CMD="wget https://fantom-ghost-builds.s3.amazonaws.com/"${S3_FILE}
-            BUILD_CMD="cd /var/www/ghost/ && ghost update --force --zip ~/"${S3_FILE}
+            BUILD_CMD="cd /var/www/ghost/ && ghost update --force --no-mem-check --zip ~/"${S3_FILE}
             echo "ec2-54-158-15-108.compute-1.amazonaws.com,54.158.15.108 ecdsa-sha2-nistp256 ${EC2_KNOWN_HOST}" >> ~/.ssh/known_hosts
             ssh ubuntu@ec2-54-158-15-108.compute-1.amazonaws.com $WGET_CMD
             ssh ubuntu@ec2-54-158-15-108.compute-1.amazonaws.com $BUILD_CMD

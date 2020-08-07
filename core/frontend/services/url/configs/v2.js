@@ -31,6 +31,7 @@ module.exports = [
                 'twitter_description',
                 'custom_template',
                 'content_type',
+                'duration',
                 'locale'
             ],
             withRelated: ['tags', 'authors'],

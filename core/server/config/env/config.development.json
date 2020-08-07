@@ -1,7 +1,7 @@
 {
     "url": "http://localhost:2368",
     "staticSite": {
-        "url": "https://fantom-ghost-site.stevengresh.com"
+        "url": "https://shady.cereal.app"
     },
     "database": {
         "client": "sqlite3",

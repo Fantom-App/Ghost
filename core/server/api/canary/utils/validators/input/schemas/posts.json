@@ -17,6 +17,10 @@
                     "type": "string",
                     "maxLength": 2000
                 },
+                "duration": {
+                    "type": "string",
+                    "maxLength": 10
+                },
                 "slug": {
                     "type": "string",
                     "maxLength": 191
