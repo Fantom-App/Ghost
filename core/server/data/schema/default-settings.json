@@ -92,10 +92,19 @@
             "defaultValue" : ""
         },
         "facebook": {
-            "defaultValue" : "ghost"
+            "defaultValue" : "CerealApp"
         },
         "twitter": {
-            "defaultValue" : "tryghost"
+            "defaultValue" : "CerealApp"
+        },
+        "youtube": {
+            "defaultValue" : "CerealApp"
+        },
+        "twitch": {
+            "defaultValue" : "Cereal"
+        },
+        "instagram": {
+            "defaultValue" : "Cereal"
         },
         "labs": {
             "defaultValue": "{}"
