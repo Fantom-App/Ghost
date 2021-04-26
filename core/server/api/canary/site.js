@@ -20,7 +20,8 @@ const site = {
                 // @TODO: move these to a members API
                 plans: membersService.config.getPublicPlans(), // these are new members features that probably won't live here
                 allowSelfSignup: membersService.config.getAllowSelfSignup(), // these are new members features that probably won't live here,
-                staticSiteUrl: config.get('staticSite:url')
+                staticSiteUrl: config.get("staticSite:url"),
+                tiers: config.get("tiers"),
             };
 
             // Brand is currently an experimental feature
