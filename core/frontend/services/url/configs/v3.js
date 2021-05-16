@@ -101,7 +101,8 @@ module.exports = [
                 'parent_id',
                 'type',
                 'featured',
-                'featured_description'
+                'featured_description',
+                'yt_playlist_id'
             ],
             filter: 'visibility:public',
             shouldHavePosts: {

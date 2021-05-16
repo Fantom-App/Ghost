@@ -27,6 +27,10 @@
                     "type": ["string", "null"],
                     "maxLength": 191
                 },
+                "yt_playlist_id": {
+                    "type": ["string", "null"],
+                    "maxLength": 191
+                },
                 "slug": {
                     "type": ["string", "null"],
                     "maxLength": 191

@@ -166,6 +166,7 @@ module.exports = {
         type: {type: 'string', maxlength: 191, nullable: false, defaultTo: 'collection'},
         featured: {type: 'bool', nullable: false, defaultTo: false},
         featured_description: {type: 'string', maxlength: 191, nullable: true},
+        yt_playlist_id: {type: 'string', maxlength: 191, nullable: true},
         name: {type: 'string', maxlength: 191, nullable: false, validations: {matches: /^([^,]|$)/}},
         slug: {type: 'string', maxlength: 191, nullable: false, unique: true},
         description: {type: 'text', maxlength: 65535, nullable: true, validations: {isLength: {max: 500}}},
