@@ -12,6 +12,7 @@
                     "meta_description": null,
                     "featured_description": null,
                     "yt_playlist_id": null,
+                    "collection": null,
                     "featured": false,
                     "type": "collection"
                 }

@@ -31,6 +31,10 @@
                     "type": ["string", "null"],
                     "maxLength": 191
                 },
+                "collection": {
+                    "type": ["string", "null"],
+                    "maxLength": 24
+                },
                 "slug": {
                     "type": ["string", "null"],
                     "maxLength": 191
