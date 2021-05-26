@@ -37,7 +37,7 @@
 
 The easiest way to deploy Ghost is with our official **[Ghost(Pro)](https://ghost.org/pricing/)** managed service. You can have a fresh instance up and running in a couple of clicks with a worldwide CDN, backups, security and maintenance all done for you.
 
-Not only will it save you hours of maintenance per month, but all revenue goes to the Ghost Foundation, which funds the maintenance and further development of Ghost itself. So you’ll be supporting open source software *and* getting a great service! Alternatively if you'd like to support us, we're very grateful to all our backers on [Open Collective](https://opencollective.com/ghost) :heart:
+Not only will it save you hours of maintenance per month, but all revenue goes to the Ghost Foundation, which funds the maintenance and further development of Ghost itself. So you’ll be supporting open source software _and_ getting a great service! Alternatively if you'd like to support us, we're very grateful to all our backers on [Open Collective](https://opencollective.com/ghost) :heart:
 
 If you prefer to run on your own infrastructure, we also provide 1-off installs and managed support and maintenance plans via **[Ghost(Valet)](https://valet.ghost.org)** - which can save a substantial amount of developer time and resources.
 
@@ -73,7 +73,6 @@ Check out our [official documentation](https://ghost.org/docs/) for more informa
 
 &nbsp;
 
-
 # Getting Help
 
 You can find answers to a huge variety of questions, along with a large community of helpful developers over on the [Ghost forum](https://forum.ghost.org/) - replies are generally very quick. **Ghost(Pro)** customers also have access to 24/7 email support.
@@ -82,14 +81,14 @@ To stay up to date with all the latest news and product updates, make sure you [
 
 &nbsp;
 
-
 # Contributors & Advanced Developers
 
 For anyone wishing to contribute to Ghost or to hack/customise core files we recommend following our full development setup guides: [General Contributor Guide](https://ghost.org/docs/concepts/contributing/) | [Developer Setup Instructions](https://ghost.org/docs/install/source/) | [Admin Client development guide](https://ghost.org/docs/install/source/#ghost-admin)
 
 &nbsp;
 
-
 # Copyright & License
 
 Copyright (c) 2013-2020 Ghost Foundation - Released under the [MIT license](LICENSE). Ghost and the Ghost Logo are trademarks of Ghost Foundation Ltd. Please see our [trademark policy](https://ghost.org/trademark/) for info on acceptable usage.
+
+Test
