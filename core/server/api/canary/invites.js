@@ -131,6 +131,7 @@ module.exports = {
                     let adminUrl = urlUtils.urlFor('admin', true);
                     const reverseProxyPath = config.get('reverseProxyPath');
                     if (reverseProxyPath) {
+                        adminUrl = adminUrl.replace(`${reverseProxyPath}.`, '');
                         adminUrl = adminUrl.replace('/ghost', `/${reverseProxyPath}/#`)
                     }
 
